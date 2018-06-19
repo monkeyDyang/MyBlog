@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>鬼子的个人博客</title>
+<link href="../css/个人博客8-留言板.css" rel="stylesheet" style="text/css" />
+</head>
+
+<body background="../images/04.jpg">
+<div id="nav">       <!--颈部-->
+             <div id="daohang">   <!-- 仅导航栏部分-->
+             <ul>
+			       <li><a href="个人博客8.html" style="text-decoration:none"><font size="+2" face="楷体">首页</font></a></li>      
+			       <!--超链接  去下划线 定义字体大小 #处填链接地址-->
+				    
+				   <li class="navDIV"></li>                                                              
+				   <li><a href="个人博客8-子页-相册.html"   style="text-decoration:none"><font size="+2" face="楷体" >相册</font></a>
+				    
+				   </li>
+				   
+				   <li class="navDIV"></li>
+				   <li><a href="个人博客8-子页-青春美文.html" style="text-decoration:none"><font size="+2" face="楷体">青春美文</font></a></li>
+				   <li><a href="个人博客-技术文章.html" style="text-decoration:none"><font size="+2" face="楷体">技术文章</font></a></li>
+				   <li><a href="http://weibo.com/u/1853443721?refer_flag=1001030102_" target="_blank" style="text-decoration:none"><font size="+2" face="楷体">关注我</font></a>
+				       <ul>
+					       <li><a href="http://user.qzone.qq.com/1059376437?ptlang=2052"  target="_blank" style="text-decoration:"><p align="center"><font size="+1" face="楷体">我的QQ空间</font></p></a></li>
+						   <li><a href="http://weibo.com/u/1853443721?refer_flag=1001030102_" target="_blank" style="text-decoration:"><p align="center"><font size="+1" face="楷体">我的新浪微博</font></p></a></li>
+					   </ul>
+				   </li>   
+				   <li class="navDIV"></li>
+				   <li><a href="http://tieba.baidu.com/f?kw=海贼王" target="_blank" style="text-decoration:none"><font size="+2" face="楷体">海贼专区</font></a>
+				       <ul>
+					   <li><a href="http://tv.sogou.com/series/w2x4f7raxkr5j5gn6u.html?vrid=70060200" target="_blank" style="text-decoration:"><p align="center"><font size="+1" face="楷体">海贼王动画</font></p></a></li>
+					   <li><a href="http://ac.qq.com/Comic/ComicInfo/id/505430" target="_blank" style="text-decoration:"><p align="center"><font size="+1" face="楷体">海贼王漫画</font></p></a></li>
+					   <li><a href="http://tieba.baidu.com/f?kw=海贼王" target="_blank" style="text-decoration:"><p align="center"><font size="+1" face="楷体">海贼王贴吧</font></p></a></li>
+					</ul>
+			   </li>
+				  
+				   <li class="navDIV"></li>
+				   <li><a href="#" style="text-decoration:none"><font size="+2" face="楷体">留言板  </font></a></li>
+			 </ul>
+			 </div>
+</div>
+<style type="text/css">
+#da{
+width:800px;
+}
+
+.a{
+border:1px solid ;
+width:1150px;
+height:60px;
+line-height:30px;
+background-color:#FFFFFF;
+margin-left:400px;
+}
+
+.a1{
+border:1px solid #0066CC;
+width:60px;
+height:60px;
+line-height:30px;
+float:left;
+background-color:#FFFFFF;
+}
+.a2{
+border:1px solid #0066CC;
+width:180px;
+height:60px;
+line-height:30px;
+float:left;
+background-color:#FFFFFF;
+}
+.a3{
+border:1px solid #0066CC;
+width:800px;
+height:60px;
+line-height:30px;
+float:left;
+background-color:#FFFFFF;
+}
+.a4{
+border:1px solid #0066CC;
+width:100px;
+height:60px;
+line-height:30px;
+background-color:#FFFFFF;
+float:left;
+}
+
+</style>
+
+<script type="text/javascript">
+//dom节点的操作： 节点（标签元素）：创建标签元素 往对象中添加 删除标签元素
+
+/* 创建标签元素 document.createElement();
+添加子节点： xxx.appendChild(yyy); 在xxx对象中，添加yyy对象
+删除子节点： xxx,remove(yyy) 在xxx对象中，删除yyy对象
+*/
+
+function aaa(){
+var tv = document.getElementById("ta").value;
+if(tv==""){
+alert("评论不能为空！");
+return; //结束方法
+}
+
+var x = document.createElement("div"); //创建一个新的div标签对象 创建：<div></div>
+x.className = "a"; //给x对象的class属性，设置值； <div class="a"></div>
+
+var x1 = document.createElement("div");
+x1.className = "a1";
+x1.innerHTML = "游客";
+
+var x2 = document.createElement("div");
+x2.className = "a2";
+var d1 = new Date();
+var year = d1.getFullYear(); 
+var month = d1.getMonth()+1; 
+var date = d1.getDate(); 
+var hour = d1.getHours(); 
+var minute = d1.getMinutes(); 
+var second = d1.getSeconds(); 
+x2.innerHTML = year+"-"+month+"-"+date+"	"+hour+":"+minute+":"+second;
+
+var x3 = document.createElement("div");
+x3.className = "a3";
+x3.innerHTML = tv;
+
+var x4 = document.createElement("div");
+x4.className = "a4";
+x4.innerHTML = "<input type='button' value='删除' onclick='del(this)'>";
+
+//被包含的节点叫子节点，包含子节点的叫父节点
+
+x.appendChild(x1); //给x对象添加子节点！
+x.appendChild(x2); 
+x.appendChild(x3); 
+x.appendChild(x4); 
+document.getElementById("da").appendChild(x);
+document.getElementById("ta").value = "";
+}
+
+//obj代表你点击的那个按钮对象
+function del(obj){
+if(confirm("确定要删除？")){
+var da = document.getElementById("da");
+//obj.parentNode 获得obj的父节点 ：包含按钮的div对象
+da.removeChild(obj.parentNode.parentNode); //给da对象删除子节点
+
+}
+
+}
+
+</script>
+</head>
+
+<body>
+<p align="center">
+<font size="+2"><b>请留言：</b><br></font>
+<textarea name="textarea" cols="150px" rows="8px" id="ta"></textarea>
+<br>
+<input type="button" value="发布" onclick="aaa()" ><br>
+</p>
+<div id="da">
+<div class="a">
+<div class="a1">用户名:</div>
+<div class="a2">时间：</div>
+<div class="a3">内容：</div>
+<div class="a4">操作：</div>
+</div>
+
+</div>
+
+</body>
+</html>

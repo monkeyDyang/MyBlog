@@ -1,0 +1,115 @@
+/* CSS Document */
+#half{
+width:1920px; 
+height:1080px;
+/*background-color:#000000;
+背景图插入*/
+background-image:url(../images/04.jpg);
+background-repeat:no-repeat;
+background-size:100% auto;
+filter:alpha(opacity=50);
+float:left;
+}
+
+/*颈部*/
+#nav{
+width:1920px;
+height:60px;
+background-color:#FF9900; 
+position:relative; /*对象不可层叠，但将依据 left ， right ， top ， bottom 等属性在正常文档流中偏移位置*/
+font-size:14px;    /*子菜单 字体大小  14px刚好*/
+color:#000000;     /*子菜单 字体颜色*/
+float:left;       /*若不左幅，有空隙*/
+}
+
+/*导航栏*/
+#daohang{
+width:720px;
+height:60px;
+margin-left:600px;   /*与左边的间距*/
+}
+
+#daohang ul { 
+list-style-type: none; 
+}
+
+#daohang ul li { 
+float: left; 
+position: relative; 
+}
+ 
+#daohang ul li a { 
+text-align: center; 
+border-right:1px solid #e9e9e9;       /* 设置对象右边框的样式 */
+padding:10px;                        /*导航框的 高度*/ 
+display:block;                       /*块对象的默认值。将对象强制作为块对象呈递，为对象之后添加新行*/
+text-decoration:none;                /*对象文本 无修饰*/
+color:#000000;                        /*主菜单 文字 颜色 ---黑色*/ 
+} 
+
+#daohang ul li ul { 
+display: none;   /*隐藏对象。与 visibility 属性的hidden值不同，其不为被隐藏的对象保留其物理空间*/
+} 
+
+#daohang ul li:hover ul { 
+display:block;
+position: absolute;
+/*将对象从文档流中拖出，使用 left ， right ， top ， bottom 等属性相对于其最接近的一个最有定位设置的父对象进行绝对定位。如果不存在这样的父对象，则依据 body 对象。而其层叠通过 z-index 属性定义*/
+top:45px;             /*子菜单与主菜单上下之间的距离。   ----必须要有上一句的存在才能生效*/
+min-width:190px;      /* 设置对象的 最小 宽度*/ 
+left:0px;            /*子菜单与主菜单左右之间的距离。  */
+} 
+
+#daohang ul li:hover ul li a { 
+display:block; 
+background:#12aeef; 
+color:#ffffff; 
+width: 110px; 
+text-align: center; 
+border-bottom: 1px solid #f2f2f2; 
+border-right: none; 
+} 
+#daohang ul li:hover ul li a:hover { 
+background:#6dc7ec;   /*  两处 改变颜色均无明显变化-----*/
+color:#FFFFFF; 
+}
+.borderleft {
+border-left: 1px solid #e9e9e9;
+}
+.top { 
+border-top: 1px solid #f2f2f2;
+}
+ #nav ul li a:hover {
+background:#0099FF ;  /*控制菜单在鼠标移入时的 背景 色----蓝色*/
+color:#FFFFFF;        /*控制菜单在鼠标移入时的 字体 色 ---白色*/
+} 
+
+/*主体*/
+#mainbody{
+margin-left:400px;                     /*与左边框相距400px*/
+width:1120px; 
+height:1000px;
+float:left;
+background-color:#CCCCCC;
+}
+#upbody{
+height:846px;
+width:1180px;}
+#downbody{
+height:152px;
+width:1180px;}
+
+
+/*尾部*/
+#footer
+{
+width:1120px; 
+height:50px;
+margin-left:400px; 
+top:0px;
+}
+
+
+/* CSS Document */
+
+

@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>鬼子的个人博客</title>
+<script src="layer/jquery.js"></script>
+<script src="layer/layer.js"></script>
+<link rel="stylesheet" type="text/css" href="layer/style.css">
+</head>
+<body>
+<div id="all">
+
+<div id="nav">       <!--颈部-->
+             <div id="daohang">   <!-- 仅导航栏部分-->
+             <ul>
+			       <li><a href="个人博客8.html" style="text-decoration:none"><font size="+2" face="楷体">首页</font></a></li>      
+			       <!--超链接  去下划线 定义字体大小 #处填链接地址-->
+				    
+				   <li class="navDIV"></li>                                                              
+				   <li><a href="个人博客8-子页-相册.html"   style="text-decoration:none"><font size="+2" face="楷体" >相册</font></a>
+				    
+				   </li>
+				   
+				   <li class="navDIV"></li>
+				   <li><a href="个人博客8-子页-青春美文.html" style="text-decoration:none"><font size="+2" face="楷体">青春美文</font></a></li>
+				   <li><a href="个人博客-技术文章.html" style="text-decoration:none"><font size="+2" face="楷体">技术文章</font></a></li>
+				   <li><a href="http://weibo.com/u/1853443721?refer_flag=1001030102_" target="_blank" style="text-decoration:none"><font size="+2" face="楷体">关注我</font></a>
+				       <ul>
+					       <li><a href="http://user.qzone.qq.com/1059376437?ptlang=2052"  target="_blank" style="text-decoration:"><p align="center"><font size="+1" face="楷体">我的QQ空间</font></p></a></li>
+						   <li><a href="http://weibo.com/u/1853443721?refer_flag=1001030102_" target="_blank" style="text-decoration:"><p align="center"><font size="+1" face="楷体">我的新浪微博</font></p></a></li>
+					   </ul>
+				   </li>   
+				   <li class="navDIV"></li>
+				   <li><a href="http://tieba.baidu.com/f?kw=海贼王" target="_blank" style="text-decoration:none"><font size="+2" face="楷体">海贼专区</font></a>
+				       <ul>
+					   <li><a href="http://tv.sogou.com/series/w2x4f7raxkr5j5gn6u.html?vrid=70060200" target="_blank" style="text-decoration:"><p align="center"><font size="+1" face="楷体">海贼王动画</font></p></a></li>
+					   <li><a href="http://ac.qq.com/Comic/ComicInfo/id/505430" target="_blank" style="text-decoration:"><p align="center"><font size="+1" face="楷体">海贼王漫画</font></p></a></li>
+					   <li><a href="http://tieba.baidu.com/f?kw=海贼王" target="_blank" style="text-decoration:"><p align="center"><font size="+1" face="楷体">海贼王贴吧</font></p></a></li>
+					</ul>
+					   </li>
+				  
+				   <li class="navDIV"></li>
+				   <li><a href="个人博客8-留言板.html" style="text-decoration:none"><font size="+2" face="楷体">留言板  </font></a></li>
+			 </ul>
+			 </div>
+</div>
+
+<div class="box">
+    <h2 style="padding-bottom:20px;">我的相册</h2>
+    <div id="imgs" class="imgs">
+        <img src="../images/543c9a971afc0.jpg"  width="500px" height="280px">
+        <img src="../images/2cf5e0fe9925bc31de5b21095ddf8db1cb137018.jpg" width="500px" height="280px">
+        <img src="../images/224706p5qegh4qwpfjwwxj.jpg" width="500px" height="280px">
+        <img src="../images/20120903121445_nx5wk.jpeg" width="500px" height="280px" >
+        <img src="../images/666.jpg" width="500px" height="280px">
+		<img src="../images/12.jpg" width="500px" height="280px">
+		<img src="../images/0001.jpg" width="500px" height="280px">
+		<img src="../images/0002.jpg" width="500px" height="280px">
+		<img src="../images/0003.jpg" width="500px" height="280px">
+		<img src="../images/0004.jpg" width="500px" height="280px">
+		<img src="../images/0005.jpg" width="500px" height="280px">
+		<img src="../images/0006.jpg" width="500px" height="280px">
+		<img src="../images/0007.jpg" width="500px" height="280px">
+		<img src="../images/0008.jpg" width="500px" height="280px">
+		<img src="../images/0009.jpg" width="500px" height="280px">
+    </div>
+</div>
+<script>
+;!function(){
+layer.use('extend/layer.ext.js', function(){
+    //初始加载即调用，所以需放在ext回调里
+    layer.ext = function(){
+        layer.photosPage({
+            parent:'#imgs'
+        });
+    };
+});
+}();
+</script>
+<div id="home">
+   <a href="#" style="text-decoration:"> <img src="../images/0023.png"></a>   <!---返回底部-->
+</div>
+</div>
+</body>
+</html>
