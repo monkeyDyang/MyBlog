@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 12, 2018 11:18:31 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping package="com.blog.bean">
+    <class name="MsgBoard" table="msgboard">
+        <id name="No" type="int">
+            <column name="NO" />
+            <generator class="native" />
+        </id>
+        <property name="Name" type="java.lang.String">
+            <column name="NAME" />
+        </property>
+        <property name="Date" type="java.util.Date">
+            <column name="DATE" />
+        </property>
+        <property name="Message" type="java.lang.String">
+            <column name="MESSAGE" />
+        </property>
+    </class>
+</hibernate-mapping>
