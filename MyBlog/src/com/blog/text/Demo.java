@@ -22,12 +22,14 @@ public class Demo {
 	private static Date date = new Date();
 	
 	public static void main(String[] args) {
-		MsgBoardDaoImpl msgBoardDaoImpl = new MsgBoardDaoImpl();
-		List<MsgBoard> msgBoards = msgBoardDaoImpl.selsetMsgBoard(1);
-		for(MsgBoard msgBoard:msgBoards) {
-			System.out.println(msgBoard.getNo());
-		}
+//		MsgBoardDaoImpl msgBoardDaoImpl = new MsgBoardDaoImpl();
+//		List<MsgBoard> msgBoards = msgBoardDaoImpl.selsetMsgBoard(1);
+//		for(MsgBoard msgBoard:msgBoards) {
+//			System.out.println(msgBoard.getNo());
+//		}
 	
+		Date date = new Date();
+		System.out.println(date);
 	}
 	
 	public static void insert() {
