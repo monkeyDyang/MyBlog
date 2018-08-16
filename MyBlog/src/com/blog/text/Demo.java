@@ -14,11 +14,13 @@ import org.junit.Test;
 
 import com.blog.bean.MsgBoard;
 import com.blog.dao.impl.MsgBoardDaoImpl;
+import com.blog.server.MsgBoardService;
+import com.blog.server.Impl.MsgBoardServiceImpl;
 import com.blog.util.HibernateSessionFactory;
 
 public class Demo {
 	
-	private static MsgBoardDaoImpl msgBoardDaoImpl = new MsgBoardDaoImpl();
+	private static MsgBoardService dao = new MsgBoardServiceImpl();
 	private static Date date = new Date();
 	
 	public static void main(String[] args) {
@@ -27,14 +29,10 @@ public class Demo {
 //		for(MsgBoard msgBoard:msgBoards) {
 //			System.out.println(msgBoard.getNo());
 //		}
-	
-		Date date = new Date();
-		System.out.println(date);
-	}
-	
-	public static void insert() {
-		//添加一条记录
-		MsgBoard msgBoard = new MsgBoard( 0, "name", date, "message");
-		msgBoardDaoImpl.insertMsgBoard(msgBoard);
+		
+	 	List<MsgBoard> mList = dao.findMsgBoard(1);
+	 	for(MsgBoard list:mList) {
+	 		System.out.println(list.getNo());
+	 	}
 	}
 }

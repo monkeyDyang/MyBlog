@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+<%@ taglib prefix="s" uri="/struts-tags" %> 
+
 <!-- 我的博客-留言板 -->
 
 <!DOCTYPE html>
@@ -33,7 +36,7 @@
       <div class="">
         <ul class="nav navbar-nav">
           <li class="dropdown"><a href="#">首页</a></li>
-          <li class="active"><a href="MessageBoard.html">留言板</a></li>
+          <li class="active"><a href="${pageContext.request.contextPath}/findmsg.action">留言板</a></li>
         </ul>
       </div>
     </div>
@@ -81,46 +84,27 @@
 
                 <dt>May 2016</dt>
                 <dd class="pos-left clearfix">
-                  <div class="circ"></div>
-                  <div class="time">Feb 03</div>
-                  <div class="events">
-
-                    <div class="row">
-                      <div class="events-header">洋洋</div>
-                      <div class="events-body">
-                            <div class="even+ts-desc">
-                              你好你好你好你好你好你好
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                      <div class="events-header">鬼子</div>
-                      <div class="events-body">
-                            <div class="even+ts-desc">
-                              工作工作工作工作
-                            </div>
-                        </div>
-                    </div>
-
-                  </div>
+                  
+                  <s:iterator value="#session.msgs" var="msg">
+	                  <div class="circ"></div>
+	                  <div class="time">
+							<s:property value="#msg.date" />
+						</div>
+	                  <div class="events">
+	                    <div class="row">
+	                      <div class="events-header">
+								<s:property value="#msg.name" />
+							</div>
+	                      <div class="events-body">
+	                            <div class="even+ts-desc">
+										<s:property value="#msg.message" />
+	                            </div>
+	                        </div>
+	                    </div>
+	                  </div>
+                  </s:iterator>
+               
                 </dd>
-
-                <dt>Feb 2016</dt>
-                <dd class="pos-right clearfix">
-                  <div class="circ"></div>
-                  <div class="time">Jan 21</div>
-                  <div class="events">
-                    <div class="events-header">大萨达</div>
-                    <div class="events-body">
-                        <div class="events-desc">
-                            的撒的撒的撒的撒
-                        </div>
-                    </div>
-                  </div>
-                </dd>
-
-                <dt>Jan 2016</dt>
 
               </dl>
             </div>

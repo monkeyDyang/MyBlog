@@ -11,11 +11,25 @@
 <constant name="struts.devMode" value="true"></constant>
 	
 	<package name="MsgBoard" namespace="/" extends="struts-default">
-
-		<!-- add留言action -->
-		<action name="addmsg" class="com.blog.action.MsgBoardAction">
-		    <result name="success">/jsp/success.jsp</result>
+		<!-- addaction -->
+		<action name="addmsg" class="com.blog.action.MsgBoardAction" method="addAction">
+		    <result name="add">/jsp/success.jsp</result>
+		</action>
+		<!-- findaction -->
+		<action name="findmsg" class="com.blog.action.MsgBoardAction" method="findAction">
+			<result name="success">/jsp/MessageBoard.jsp</result>
 		</action>
 		
+		<action name="msgboard" class="com.blog.action.IndexAction">
+			<result name="success">/jsp/MessageBoard.jsp</result>
+		</action>
+		
+	</package>
+	
+	<!-- 起始页package -->
+	<package name="Index" namespace="/" extends="struts-default">
+		<action name="msgboard" class="com.blog.action.IndexAction">
+			<result name="success">/jsp/MessageBoard.jsp</result>
+		</action>
 	</package>
 </struts>
