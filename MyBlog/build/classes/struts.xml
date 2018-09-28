@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+ 
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+	"http://struts.apache.org/dtds/struts-2.5.dtd">
+ 
+<struts>
+
+<!-- 对于Struts2.5以上的版本如果需要url+!+方法访问Action某个方法的话需要在struts.xml加入如下语句 -->
+<constant name="struts.enable.DynamicMethodInvocation" value="true"/>
+<constant name="struts.devMode" value="true"></constant>
+	
+	<package name="MsgBoard" namespace="/" extends="struts-default">
+		<!-- addaction -->
+		<action name="addmsg" class="com.blog.action.MsgBoardAction" method="addAction">
+		    <result name="add">/jsp/success.jsp</result>
+		</action>
+		<!-- findaction -->
+		<action name="findmsg" class="com.blog.action.MsgBoardAction" method="findAction">
+			<result name="success">/jsp/MessageBoard.jsp</result>
+		</action>
+		
+		<action name="msgboard" class="com.blog.action.IndexAction">
+			<result name="success">/jsp/MessageBoard.jsp</result>
+		</action>
+		
+	</package>
+	
+	<!-- 起始页package -->
+	<package name="Index" namespace="/" extends="struts-default">
+		<action name="msgboard" class="com.blog.action.IndexAction">
+			<result name="success">/jsp/MessageBoard.jsp</result>
+		</action>
+	</package>
+</struts>

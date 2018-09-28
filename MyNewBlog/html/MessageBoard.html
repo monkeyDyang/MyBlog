@@ -21,7 +21,8 @@
 
 </head>
 
-<body >
+<body>
+
   <!-- 导航栏 -->
   <nav class="navbar navbar-inverse" role="navigation">
     <div class="container-fluid">
@@ -86,19 +87,19 @@
                     <div class="row">
                       <div class="events-header">洋洋</div>
                       <div class="events-body">
-                            <div class="even+ts-desc">
-                              你好你好你好你好你好你好
-                            </div>
+                        <div class="even+ts-desc">
+                          你好你好你好你好你好你好
                         </div>
+                      </div>
                     </div>
 
                     <div class="row">
                       <div class="events-header">鬼子</div>
                       <div class="events-body">
-                            <div class="even+ts-desc">
-                              工作工作工作工作
-                            </div>
+                        <div class="even+ts-desc">
+                          工作工作工作工作
                         </div>
+                      </div>
                     </div>
 
                   </div>
@@ -111,9 +112,9 @@
                   <div class="events">
                     <div class="events-header">大萨达</div>
                     <div class="events-body">
-                        <div class="events-desc">
-                            的撒的撒的撒的撒
-                        </div>
+                      <div class="events-desc">
+                        的撒的撒的撒的撒
+                      </div>
                     </div>
                   </div>
                 </dd>
@@ -129,17 +130,16 @@
         </div>
 
         <div class="row">
-            <button id="fat-btn" class="btn btn-primary" data-loading-text="Loading..."type="button">
+          <button id="fat-btn" class="btn btn-primary" data-loading-text="Loading..." type="button">
               加载更多
             </button>
-            <script>
-                $(function() {
-                    $("#fat-btn").click(function(){
-                        $(this).button('loading').delay(1000).queue(function() {
-                        });
-                    });
-                });
-            </script>
+          <script>
+            $(function() {
+              $("#fat-btn").click(function() {
+                $(this).button('loading').delay(1000).queue(function() {});
+              });
+            });
+          </script>
         </div>
       </div>
     </div>

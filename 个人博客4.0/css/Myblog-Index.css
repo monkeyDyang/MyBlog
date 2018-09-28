@@ -1,0 +1,35 @@
+﻿/*
+    Index.html 层叠样式表
+    Time:2018/9/12
+*/
+
+body{
+  height: auto;
+  width: auto;
+  background-color: #F7F7F7;
+}
+
+/*顶部背景图片*/
+.cover-image img{
+  width: 100%;
+}
+
+/*导航栏*/
+
+.header img{
+  height: 100%;
+  width: 100%;
+}
+
+.main{
+  width: 100%;
+}
+
+.back_top{
+  float: right;
+}
+
+.back_top a img {
+  width: 20%;
+  height: 20%;
+}
