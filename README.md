@@ -9,7 +9,7 @@
 - 编译器：atom、eclipse、Navicat for MySQL、StarUML、Notepad++
 - 版本控制：GitHub
 - 部署环境：腾讯云服务器
-- 访问域名：www.yyangy.cn
+- 访问域名：http://www.yyangy.cn/Onepiece/Demo/html/Index.html
 
 ## 设计流程
 
